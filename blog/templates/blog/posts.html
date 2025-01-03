@@ -1,0 +1,20 @@
+{% extends "blog/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="mt-20 w-full py-6 px-8 min-h-screen z-20">
+    <h1 class="text-4xl font-bold">Posts</h1>
+    <ul class="w-full bg-stone-950 mt-4 min-h-fit rounded-lg">
+        {% for post in posts %}
+            <li class="w-full py-4 px-4 mb-4 shadow-lg shadow-stone-800/50 border border-gray-200/20 rounded-lg">
+                <h2 class="text-2xl mb-4 font-semibold">{{ post.title }}</h2>
+                <p>
+                    {{ post.content|safe }}
+                </p>
+                <p class="mt-4 text-sm text-gray-400">{{ post.date_posted }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

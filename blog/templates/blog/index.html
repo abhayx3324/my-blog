@@ -1,0 +1,74 @@
+{% extends "blog/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="relative w-full min-h-screen overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full bg-fixed bg-cover bg-center" style="background-image: url('{% static "blog/homebg.png" %}');">
+    </div>
+
+    <div class="absolute inset-0 z-10 flex items-center justify-left h-full w-full">
+        <div class="ml-24">
+            <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-300 text-8xl font-bold mb-4 rounded-lg">Abhay V Nikkam</h1>
+            <p class="text-white text-2xl font-semibold rounded-lg">Welcome to my blog</p>
+            <a href="#about-me">
+                <button class="mt-4 w-40 h-14 text-xl font-semibold bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-6 py-2 rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-emerald-700 hover:to-cyan-700 transition duration-400">
+                    About Me
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="about-me">
+</div>
+
+<div class="mt-20 w-full bg-stone-950 pt-10 px-8 flex justify-around items-center border-stone-800">
+    <img src="{% static 'blog/abhay.jpg' %}" alt="Abhay V Nikkam" class="rounded-full shadow-lg w-32 h-32 object-cover">
+</div>
+
+<div class="w-full bg-stone-950 py-10 px-8 flex justify-around items-center border-b border-stone-800">
+    <h1 class="text-4xl font-bold">About Me</h1>
+    <div class="w-4/6">
+        <p class="w-full bg-stone-950 mt-4">
+        I’m Abhay V Nikkam, a 3rd-year undergraduate student at BMS Institute of Technology, pursuing a B.E. in Computer Science and Engineering. I have a strong passion for technology, with a focus on software development and problem-solving. I’ve worked on projects such as a File Compression Tool using Huffman Encoding, an MP3 Player with Java Swings, and a Flight Route Planner that utilizes Dijkstra’s Algorithm.
+        </p>
+        
+        <p class="w-full bg-stone-950 mt-4">
+        In addition to my academic pursuits, I’m deeply involved in leadership roles. I currently serve as the Chair of the IEEE ITS Chapter, where I organize events and workshops with industry professionals to foster knowledge sharing and networking opportunities. As the Membership Director of the MUN Club, I manage recruitment drives and lead mock debates to enhance diplomatic skills. These roles have strengthened my leadership, teamwork, and communication abilities.
+        </p>
+
+        <p class="w-full bg-stone-950 mt-4">
+        I’ve developed a solid foundation in various programming languages like Python, C/C++, and Java, and I’m familiar with frameworks like Django, React.js, and TensorFlow. My goal is to continue learning and apply my skills to real-world challenges. I’m also interested in exploring emerging technologies and have taken additional courses such as CS50W from Harvard and Prompt Engineering from Vanderbilt University. When I’m not coding, I enjoy collaborating on projects, organizing events, and exploring new tech trends.
+        </p>
+
+        <p class="w-full bg-stone-950 mt-4">
+            In my free time, I enjoy playing chess and football. Chess helps me improve my strategic thinking, while football keeps me active and connected with my friends.
+        </p>
+        
+    </div>
+</div>
+
+<div class="w-full bg-stone-950 py-6 px-8 flex justify-around items-center">
+    <h1 class="text-4xl font-bold">Projects</h1>
+    <div class="w-4/6">
+        <ul class="w-full bg-stone-950 mt-4 mb-8 space-y-10">
+            <li>
+                <a href="https://github.com/shettydhruv16/File-Compression-Using-Huffman-Encoding-" class="font-bold hover:underline">File Compression Tool using Huffman Encoding</a>
+                <p>Developed an efficient algorithm for data compression.</p>
+                <p><span class="font-medium">Concepts Used:</span> Heapify, Min Heap, Huffman Tree, File Handling.</p>
+            </li>
+            <li>
+                <a href="https://github.com/shettydhruv16/MP3-Player-Using-Java-Swings" class="font-bold hover:underline">MP3 Player Using Java Swings</a>
+                <p>Implemented features such as play, pause, stop, and track navigation.</p>
+                <p><span class="font-medium">Concepts Used:</span> Java Swings, Event Handling, Multithreading.</p>
+            </li>
+            <li>
+                <a href="https://github.com/abhayx3324/flightRoutePlanner" class="font-bold hover:underline">Flight Route Planner</a>
+                <p>Developed an efficient algorithm to plan flight routes based on distance and wind intensity.</p>
+                <p><span class="font-medium">Concepts Used:</span> Dijkstra’s Algorithm, Haversine Formula, Graph Theory.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

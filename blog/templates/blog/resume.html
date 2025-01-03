@@ -1,0 +1,121 @@
+{% extends "blog/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="mt-32 text-center mx-auto">
+    <p class="text-4xl mx-auto mb-4 font-bold">Resume</p>
+    <a href="{% static 'blog/Resume.pdf' %}" class="text-stone-900 ml-4 bg-stone-100 text-xl px-4 py-2 mb-4 rounded hover:bg-stone-800 hover:text-stone-200 mr-4 flex items-center">
+        <i class="fa-solid fa-file-pdf mr-2"></i>
+        View as PDF
+    </a>
+</div>
+
+<div class="w-4/6 mx-auto my-4 p-6 bg-stone-900 shadow-lg rounded-lg">
+    <div class="text-center mb-6">
+        <h1 class="text-3xl font-bold">ABHAY V NIKKAM</h1>
+        <p class="text-lg font-medium">3rd Year Undergraduate Student</p>
+        <p class="text-gray-400 mb-2">Phone: +91 9036853351</p>
+        <p class="text-gray-400 space-x-4">
+            <a href="https://github.com/abhayx3324" target="_blank" class="hover:text-fuchsia-500">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abhay-v-nikkam-95611a25b/" target="_blank" class="hover:text-cyan-500">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="mailto:abhayv0324@gmail.com" target="_blank" class="hover:text-green-500">
+                <i class="fas fa-envelope text-2xl"></i>
+            </a>
+        </p>
+    </div>
+
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-1 mb-3">Education</h2>
+        <ul class="space-y-3">
+            <li>
+                <h3 class="font-bold">BMS Institute of Technology</h3>
+                <p>B.E. in Computer Science and Engineering (2022-2026) - <span class="font-medium">CGPA: 9.53</span></p>
+            </li>
+            <li>
+                <h3 class="font-bold">Sindhi High School Hebbal</h3>
+                <p>CBSE Class XII (2020-2022) - <span class="font-medium">Percentage: 95.8%</span></p>
+            </li>
+            <li>
+                <h3 class="font-bold">The Regency Public School</h3>
+                <p>ICSE Class X (2019-2020) - <span class="font-medium">Percentage: 98.6%</span></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-1 mb-3">Experience</h2>
+        <ul class="space-y-3">
+            <li>
+                <h3 class="font-bold">IEEE ITS Chapter, BMS Institute of Technology</h3>
+                <p>Chair (November 2024 - Present)</p>
+                <ul class="list-disc pl-5">
+                    <li>Organized events and workshops with industry professionals to bridge knowledge gaps.</li>
+                    <li>Facilitated networking opportunities and collaborations between students and experts.</li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="font-bold">Model United Nations (MUN) Club, BMS Institute of Technology</h3>
+                <p>Membership Director (May 2024 - Present)</p>
+                <ul class="list-disc pl-5">
+                    <li>Led membership drives and recruitment strategies, increasing engagement.</li>
+                    <li>Organized training sessions and mock debates to enhance skills in diplomacy.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-1 mb-3">Projects</h2>
+        <ul class="space-y-3">
+            <li>
+                <a href="https://github.com/shettydhruv16/File-Compression-Using-Huffman-Encoding-" class="font-bold hover:underline">File Compression Tool using Huffman Encoding</a>
+                <p>Developed an efficient algorithm for data compression.</p>
+                <p><span class="font-medium">Concepts Used:</span> Heapify, Min Heap, Huffman Tree, File Handling.</p>
+            </li>
+            <li>
+                <a href="https://github.com/shettydhruv16/MP3-Player-Using-Java-Swings" class="font-bold hover:underline">MP3 Player Using Java Swings</a>
+                <p>Implemented features such as play, pause, stop, and track navigation.</p>
+                <p><span class="font-medium">Concepts Used:</span> Java Swings, Event Handling, Multithreading.</p>
+            </li>
+            <li>
+                <a href="https://github.com/abhayx3324/flightRoutePlanner" class="font-bold hover:underline">Flight Route Planner</a>
+                <p>Developed an efficient algorithm to plan flight routes based on distance and wind intensity.</p>
+                <p><span class="font-medium">Concepts Used:</span> Dijkstra’s Algorithm, Haversine Formula, Graph Theory.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-1 mb-3">Achievements</h2>
+        <ul class="list-disc pl-5">
+            <li>2nd place in 2024 PBL Open Day competition for "File Compression Tool."</li>
+            <li>Attended the "Paperless Pursuit" CTF event hosted by Accorian.</li>
+            <li>Attended the Ethical Hacking workshop hosted by IEEE.</li>
+            <li>Integral part of the annual fest at BMS Institute of Technology, managing art and decor.</li>
+        </ul>
+    </div>
+
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-1 mb-3">Additional Courses</h2>
+        <ul class="list-disc pl-5">
+            <li>CS50W - Introduction to Web Programming (Ongoing) - Harvard University</li>
+            <li>Prompt Engineering using ChatGPT - Vanderbilt University</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-1 mb-3">Technical Skills</h2>
+        <ul class="list-disc pl-5">
+            <li><span class="font-medium">Programming Languages:</span> Python, C/C++, Java, HTML, CSS, JavaScript</li>
+            <li><span class="font-medium">Frameworks/Libraries:</span> Django, React.js, TensorFlow, Keras</li>
+            <li><span class="font-medium">Technologies/Tools:</span> MATLAB, SOLIDWORKS, MongoDB, SQL, Docker, GIT</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

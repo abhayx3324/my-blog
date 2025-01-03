@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Abhay's Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+        <script src="https://kit.fontawesome.com/9b961547d6.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        {% block script %}
+        {% endblock %}
+    </head>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <body class="bg-stone-950 text-gray-200 min-h-screen min-w-full scroll-smooth flex flex-col" style="font-family: 'Work Sans', sans-serif; background-image: url('{% static "blog/homebg.png" %}'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div id="navbar" class="fixed top-0 left-0 w-full py-8 px-8 mb-2 flex justify-between backdrop-blur-sm z-50">
+            <a href="{% url 'home' %}" class="text-3xl inline" style="font-family: 'Holtwood One SC', serif;"> ABHAY'S BLOG </a>
+            <div class="flex space-x-4">
+                <a href="{% url 'home' %}" 
+                class="text-center font-semibold w-24 h-10 flex items-center justify-center px-4 py-2 rounded-md hover:bg-stone-800 hover:text-gray-200 focus:text-gray-900 focus:bg-stone-100 {% if request.resolver_match.url_name == 'home' %}bg-stone-100 text-black{% endif %}">
+                    Home
+                </a>
+                <a href="{% url 'posts' %}" 
+                class="text-center font-semibold w-24 h-10 flex items-center justify-center px-4 py-2 rounded-md hover:bg-stone-800 hover:text-gray-200 focus:text-gray-900 focus:bg-stone-100 {% if request.resolver_match.url_name == 'posts' %}bg-stone-100 text-black{% endif %}">
+                    Posts
+                </a>
+                <a href="{% url 'resume' %}" 
+                class="text-center font-semibold w-24 h-10 flex items-center justify-center px-4 py-2 rounded-md hover:bg-stone-800 hover:text-gray-200 focus:text-gray-900 focus:bg-stone-100 {% if request.resolver_match.url_name == 'resume' %}bg-stone-100 text-black{% endif %}">
+                    Resume
+                </a>
+            </div>
+        </div>
+
+        {% block body %}
+        {% endblock %}
+
+        <!-- Footer Section with Blur Effect -->
+        <div class="py-8 my-4 z-20">
+            <div class="container mx-auto text-center">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="https://github.com/abhayx3324" target="_blank" class="hover:text-fuchsia-500">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhay-v-nikkam-95611a25b/" target="_blank" class="hover:text-cyan-500">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="mailto:abhayv0324@gmail.com" target="_blank" class="hover:text-green-500">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com/_abhayx324/" target="_blank" class="hover:text-blue-500">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+    
+                <p class="text-md">
+                    &copy; 2025 Abhay V Nikkam. All Rights Reserved.
+                </p>
+                <p class="text-md">
+                    Contact: +91 9036853351
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
