@@ -1,3 +1,4 @@
+import os
 """
 Django settings for abhay project.
 
@@ -69,6 +70,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'abhay.wsgi.application'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Database
