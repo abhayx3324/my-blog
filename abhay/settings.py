@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a4eiw-80uw3nh*30ynmesl(cfeh)0fd4)n&(gojyg!yo9oly@d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abhay-v-nikkam.onrender.com', '127.0.0.1']
 
 # Application definition
 
@@ -115,6 +115,10 @@ USE_I18N = True
 
 USE_TZ = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://abhay-v-nikkam.onrender.com',
+    'http://abhay-v-nikkam.onrender.com',
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
