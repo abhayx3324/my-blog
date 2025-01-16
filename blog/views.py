@@ -11,3 +11,6 @@ def posts(request):
 def resume(request):
     return render(request, 'blog/resume.html')
 
+def contact(request):
+    return render(request, 'blog/contact.html')
+
