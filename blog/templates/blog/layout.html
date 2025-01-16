@@ -39,6 +39,10 @@
                 class="text-center font-semibold w-24 h-10 flex items-center justify-center px-4 py-2 rounded-md hover:bg-stone-800 hover:text-gray-200 focus:text-gray-900 focus:bg-stone-100 {% if request.resolver_match.url_name == 'resume' %}bg-stone-100 text-black{% endif %}">
                     Resume
                 </a>
+                <a href="{% url 'contact' %}" 
+                class="text-center font-semibold w-24 h-10 flex items-center justify-center px-4 py-2 rounded-md hover:bg-stone-800 hover:text-gray-200 focus:text-gray-900 focus:bg-stone-100 {% if request.resolver_match.url_name == 'contact' %}bg-stone-100 text-black{% endif %}">
+                    Contact
+                </a>
             </div>
         </div>
 
