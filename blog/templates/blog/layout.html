@@ -25,7 +25,7 @@
 
     <body class="bg-stone-950 text-gray-200 min-h-screen min-w-full scroll-smooth flex flex-col" style="font-family: 'Work Sans', sans-serif; background-image: url('{% static "blog/homebg.png" %}'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div id="navbar" class="fixed top-0 left-0 w-full py-8 px-8 mb-2 flex justify-between backdrop-blur-sm z-50">
-            <a href="{% url 'home' %}" class="text-3xl inline" style="font-family: 'Holtwood One SC', serif;"> ABHAY'S BLOG </a>
+            <a href="{% url 'home' %}" class="text-3xl inline" style="font-family: 'Holtwood One SC', serif;"> ABHAY V NIKKAM </a>
             <div class="flex space-x-4">
                 <a href="{% url 'home' %}" 
                 class="text-center font-semibold w-24 h-10 flex items-center justify-center px-4 py-2 rounded-md hover:bg-stone-800 hover:text-gray-200 focus:text-gray-900 focus:bg-stone-100 {% if request.resolver_match.url_name == 'home' %}bg-stone-100 text-black{% endif %}">
